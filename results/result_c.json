@@ -1,0 +1,146 @@
+{
+  "source_image": "D:\\dispatch-table-ocr\\data\\sample_c_obscured.png",
+  "processing_timestamp": "2026-09-30T19:01:13.028252Z",
+  "processing_time_ms": 20674.67,
+  "image_metadata": {
+    "width": 1000,
+    "height": 580,
+    "estimated_skew_degrees": 0.0,
+    "rotation_corrected": false,
+    "contrast_enhancement_applied": false
+  },
+  "summary": {
+    "total_rows_detected": 4,
+    "valid_rows": 2,
+    "reconciliation_failed_rows": 1,
+    "unreadable_or_invalid_rows": 1,
+    "batch_status": "REQUIRES_REVIEW_UNREADABLE"
+  },
+  "records": [
+    {
+      "row_index": 1,
+      "product_code": {
+        "raw_text": "PRD-101",
+        "normalized_value": "PRD-101",
+        "confidence": 1.0,
+        "is_readable": true
+      },
+      "dispatched": {
+        "raw_text": "1,250",
+        "normalized_value": 1250,
+        "confidence": 0.997,
+        "is_readable": true
+      },
+      "returned": {
+        "raw_text": "50",
+        "normalized_value": 50,
+        "confidence": 1.0,
+        "is_readable": true
+      },
+      "net_dispatch": {
+        "raw_text": "1,200",
+        "normalized_value": 1200,
+        "confidence": 0.997,
+        "is_readable": true
+      },
+      "reconciled": true,
+      "status": "VALID",
+      "findings": []
+    },
+    {
+      "row_index": 2,
+      "product_code": {
+        "raw_text": "PRD-102",
+        "normalized_value": "PRD-102",
+        "confidence": 1.0,
+        "is_readable": true
+      },
+      "dispatched": {
+        "raw_text": "800",
+        "normalized_value": 800,
+        "confidence": 0.999,
+        "is_readable": true
+      },
+      "returned": {
+        "raw_text": null,
+        "normalized_value": null,
+        "confidence": 0.0,
+        "is_readable": false
+      },
+      "net_dispatch": {
+        "raw_text": "775",
+        "normalized_value": 775,
+        "confidence": 1.0,
+        "is_readable": true
+      },
+      "reconciled": null,
+      "status": "UNREADABLE_CELL",
+      "findings": [
+        "Returned cell error: Cell value is missing",
+        "One or more quantity cells are unreadable/missing; value reconstruction prohibited."
+      ]
+    },
+    {
+      "row_index": 3,
+      "product_code": {
+        "raw_text": "PRD-103",
+        "normalized_value": "PRD-103",
+        "confidence": 1.0,
+        "is_readable": true
+      },
+      "dispatched": {
+        "raw_text": "600",
+        "normalized_value": 600,
+        "confidence": 0.999,
+        "is_readable": true
+      },
+      "returned": {
+        "raw_text": "40",
+        "normalized_value": 40,
+        "confidence": 1.0,
+        "is_readable": true
+      },
+      "net_dispatch": {
+        "raw_text": "570",
+        "normalized_value": 570,
+        "confidence": 1.0,
+        "is_readable": true
+      },
+      "reconciled": false,
+      "status": "RECONCILIATION_FAILED",
+      "findings": [
+        "Reconciliation discrepancy: Dispatched (600) - Returned (40) = 560, but reported Net Dispatch is 570 (diff: +10). Reported value preserved."
+      ]
+    },
+    {
+      "row_index": 4,
+      "product_code": {
+        "raw_text": "PRD-104",
+        "normalized_value": "PRD-104",
+        "confidence": 1.0,
+        "is_readable": true
+      },
+      "dispatched": {
+        "raw_text": "450",
+        "normalized_value": 450,
+        "confidence": 1.0,
+        "is_readable": true
+      },
+      "returned": {
+        "raw_text": "0",
+        "normalized_value": 0,
+        "confidence": 0.966,
+        "is_readable": true
+      },
+      "net_dispatch": {
+        "raw_text": "450",
+        "normalized_value": 450,
+        "confidence": 1.0,
+        "is_readable": true
+      },
+      "reconciled": true,
+      "status": "VALID",
+      "findings": []
+    }
+  ]
+}
