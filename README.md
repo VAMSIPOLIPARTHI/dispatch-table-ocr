@@ -246,14 +246,14 @@ This generates:
 ```bash
 pytest tests/ -v
 ```
-All 7 unit tests cover:
-- Row that reconciles (`VALID`)
-- Row that does not reconcile (`RECONCILIATION_FAILED`, preserves reported Net Dispatch)
-- Missing quantity (`UNREADABLE_CELL`)
-- Invalid quantity format (`INVALID_FORMAT`)
-- Comma-separated quantity normalization
-- Strict non-invention verification (no auto-calculation for unreadable cell)
-- Multi-row continuation when an intermediate row fails
+All 7 unit tests pass (covering the **5 required prompt scenarios** plus **2 additional edge cases**):
+1. `test_row_that_reconciles` (Required: A row that reconciles -> `VALID`)
+2. `test_row_that_does_not_reconcile` (Required: A row that does not reconcile -> `RECONCILIATION_FAILED`, preserves reported Net Dispatch)
+3. `test_missing_quantity` (Required: A missing quantity -> `UNREADABLE_CELL`, no back-calculation)
+4. `test_invalid_quantity` (Required: An invalid quantity format -> `INVALID_FORMAT`)
+5. `test_comma_separated_quantity` (Required: A comma-separated quantity normalized into integer)
+6. `test_no_synthetic_replacement_when_obscured` (Edge Case: Verifies strict no-invention policy for obscured cells)
+7. `test_multi_row_continuation` (Edge Case: Verifies pipeline continues processing subsequent rows when an intermediate row fails)
 
 ### 4. Process Any Single Image (CLI)
 ```bash
