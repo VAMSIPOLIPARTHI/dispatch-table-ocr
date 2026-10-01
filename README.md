@@ -2,7 +2,7 @@
 
 **Candidate Submission** | Sparks Intelligence Technical Assessment  
 **Author:** Technical Engineering Candidate  
-**Approximate Time Spent:** ~3.5 hours  
+
 
 ---
 
