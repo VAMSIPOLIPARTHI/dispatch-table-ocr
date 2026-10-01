@@ -278,6 +278,4 @@ Runs the pipeline across all three images, exports `results/result_a.json`, `res
 - Does not currently rectify non-affine 3D perspective distortion (e.g. handheld camera tilted backwards).
 - If column headers are completely obscured or cropped out, the extractor uses geometric quartile fallback splitting.
 
-### AI Assistance Disclosure
-- Generative AI assistance (Claude 3.7 / Gemini) was utilized as an interactive programming partner for scaffolding boilerplate data models and reviewing edge test cases.
-- All algorithmic decisions, mathematical deskewing formulation, layout association logic, and validation invariants were designed, verified, and debugged by the author.
+
